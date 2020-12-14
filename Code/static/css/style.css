@@ -1,0 +1,109 @@
+html body {
+    background-color: hsl(0, 0%, 15%);
+    /* color: #ffffff; */
+}
+
+#banner {
+    background-image: url("../../../Images/Navelgazing.jpg");
+    height: 300px;
+    padding: 100px 0px 0px 0px;
+  }
+  
+  #banner h1 {
+    color: #ffffff;
+    background-color: #000000;
+    font-size: 50px;
+    -webkit-text-stroke: 1px white;
+    -webkit-text-fill-color: black;
+    padding-bottom: 5px;
+  }
+  
+  #banner p {
+    color: #ffffff;
+    background-color: #000000;
+    font-size: 2rem;
+    margin-top: 10px;
+  }
+
+  #dashboard {
+    padding: 20px;
+  }
+
+  .well {
+    background-color: #272727;
+    color: #ffffff;
+    padding-bottom: 10px 40px 10px 10px;
+    margin-bottom: 30px;
+    height: fit-content;
+  }
+
+  .well h5{
+    /* float: left; */
+    font-size: 14px;
+  }
+
+  #selDataset {
+    background-color: #272727;
+    font-size: 14px;
+    border: 2px solid;
+    border-radius: 5px;
+    width: 80px;
+  } 
+
+  #selDataset option{
+    background-color: #272727;
+    color: #ffffff;
+    font-size: 12px;
+  }
+
+  #selDataset option :hover{
+    background-color: #ffffff;
+    color:#000000;
+  }
+
+  #sample-metadata {
+    font-size: 14px;
+    font-family:Arial, Helvetica, sans-serif;
+  }
+
+  #sample-metadata span{
+    font-weight: bold;
+  }
+
+
+
+  @media only screen and (max-width: 600px) {
+    #labelID {
+      width: 50%;
+    }
+    #selectID {
+      float: right;
+    }
+    #selDataset {
+      width: 80px;
+      margin-top: -50px;
+      float: left;
+    }
+  }
+
+  @media only screen and (max-width: 979px) {
+    .well {
+      padding-top: 10px;
+       padding-bottom: 30px;
+    }
+    #selDataset {
+      float: right;
+      width: fit-content;
+    } 
+
+  }  
+  @media only screen and (min-width: 1500px) {
+    #selDataset {
+      margin-top: -25px;
+      float: right;
+    }
+    #sample-metadata {
+      padding-left: 50px;
+    }
+
+  } 
