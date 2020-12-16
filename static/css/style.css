@@ -4,7 +4,7 @@ html body {
 }
 
 #banner {
-    background-image: url("../../../Images/Navelgazing.jpg");
+    background-image: url("../../Images/Navelgazing.jpg");
     height: 300px;
     padding: 100px 0px 0px 0px;
   }
@@ -21,7 +21,7 @@ html body {
   #banner p {
     color: #ffffff;
     background-color: #000000;
-    font-size: 2rem;
+    font-size: 18px;
     margin-top: 10px;
   }
 

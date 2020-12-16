@@ -21,7 +21,7 @@ function init() {
 
 
 
-function updateDataset() {
+function updatePlots() {
     d3.json("samples.json").then(function(data){
 
         dataSet = selDataset.property("value");
@@ -65,7 +65,7 @@ function updateDataset() {
             }
         }];
                 
-                // Apply the group bar mode to the layout
+        // Apply the group bar mode to the layout
         var layout = {
             plot_bgcolor:"#272727",
             paper_bgcolor:"#262626",
@@ -107,18 +107,19 @@ function updateDataset() {
           };
           
           Plotly.newPlot('bubble', bubble_data, layout);
+          
 
 
-
-
+          // Calling Gauge Chart function from bonus.js
+          plotGauge(+metadata[0].wfreq);
 
     });
 }
 
 
 init();
-updateDataset();
-selDataset.on("change", updateDataset);
+updatePlots();
+selDataset.on("change", updatePlots);
    
 
 
