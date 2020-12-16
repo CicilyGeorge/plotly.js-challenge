@@ -3,9 +3,9 @@ html body {
     /* color: #ffffff; */
 }
 
-/* .modebar {
+.modebar {
   display: none !important;
-} */
+}
 
 #banner {
     background-image: url("../../Images/Navelgazing.jpg");
@@ -23,7 +23,7 @@ html body {
   }
   
   #banner p {
-    color: #ffffff;
+    color: #919191;
     background-color: #000000;
     font-size: 18px;
     margin-top: 10px;
@@ -74,6 +74,18 @@ html body {
     font-weight: bold;
   }
 
+  #bar {
+    padding-left: 10px;
+  }
+
+  #gauge {
+    float: left;
+  }
+
+  #bubble {
+    margin-top: -180px;
+  }
+
 
 
   @media only screen and (max-width: 600px) {
@@ -85,7 +97,7 @@ html body {
     }
     #selDataset {
       width: 80px;
-      margin-top: -50px;
+      margin-top: -20px;
       float: left;
     }
   }

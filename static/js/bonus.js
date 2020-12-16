@@ -1,21 +1,21 @@
 function plotGauge(wfreq) {
-    var level = wfreq * 20;
+    let level = wfreq * 20;
     // Trig to calc meter point
-    var degrees = 180 - level;
-    var radius = 0.5;
-    var radians = (degrees * Math.PI) / 180;
-    var x = radius * Math.cos(radians);
-    var y = radius * Math.sin(radians);
+    let degrees = 180 - level;
+    let radius = 0.5;
+    let radians = (degrees * Math.PI) / 180;
+    let x = radius * Math.cos(radians);
+    let y = radius * Math.sin(radians);
 
     // Path: may have to change to create a better triangle
-    var mainPath = "M -.0 -0.05 L .0 0.05 L ";
-    var pathX = String(x);
-    var space = " ";
-    var pathY = String(y);
-    var pathEnd = " Z";
-    var path = mainPath.concat(pathX, space, pathY, pathEnd);
+    let mainPath = "M -.0 -0.05 L .0 0.05 L ";
+    let pathX = String(x);
+    let space = " ";
+    let pathY = String(y);
+    let pathEnd = " Z";
+    let path = mainPath.concat(pathX, space, pathY, pathEnd);
 
-    var data = [
+    let data = [
     {
         type: "scatter",
         x: [0],
@@ -30,6 +30,7 @@ function plotGauge(wfreq) {
         values: [50/9, 50/9, 50/9, 50/9, 50/9, 50/9, 50/9, 50/9, 50/9, 50],
         rotation: 90,
         text: ["8-9", "7-8", "6-7", "5-6", "4-5", "3-4", "2-3", "1-2", "0-1", ""],
+        textfont: {color:"#f1f1f1"},
         textinfo: "text",
         textposition: "inside",
         marker: {
@@ -54,7 +55,7 @@ function plotGauge(wfreq) {
     }
     ];
 
-    var layout = {
+    let layout = {
     shapes: [
         {
         type: "path",
@@ -82,10 +83,14 @@ function plotGauge(wfreq) {
     },
         plot_bgcolor:"262626",
         paper_bgcolor:"#262626",
-        font: { color: "#ffffff"}
+        font: { color: "#a1a1a1"},
+        automargin: true
     };
-    var defaultPlotlyConfiguration = {displayModeBar: false};
+    let config = {
+        displayModeBar: false, // this is the line that hides the bar.
+        responsive: true
+    };
 
-    Plotly.newPlot('gauge', data, layout, defaultPlotlyConfiguration);
+    Plotly.newPlot('gauge', data, layout, config);
 
 }
