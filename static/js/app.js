@@ -82,8 +82,9 @@ function createPlots() {
             automargin: true
         };
               
-        // Render the plot
+        // Render the bar plot
         Plotly.newPlot("bar", bar_data, layout, {responsive: true});
+
 
 
         //  Plotting bubble chart that displays each sample
@@ -118,7 +119,7 @@ function createPlots() {
             displayModeBar: false, // this is the line that hides the bar.
             responsive: true
           };
-          // Render the plot
+          // Render the bubble chart
           Plotly.newPlot('bubble', bubble_data, layout, config);
           
 
@@ -129,9 +130,10 @@ function createPlots() {
     });
 }
 
-
+// Calling functions on page load
 init();
 createPlots();
+// On Dropdown Select event Calling create plot function
 selDataset.on("change", createPlots);
    
 
