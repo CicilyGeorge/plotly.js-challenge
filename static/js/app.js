@@ -37,7 +37,7 @@ function createPlots() {
         info_type.forEach((type) => {
             
             info_box.append('p')
-                    .html(`<span class='info_type'>${type} : </span> ${metadata[0][type]}`);
+                    .html(`<span class='info_type'>${type.toUpperCase()} : </span> ${metadata[0][type]}`);
         });
 
 
@@ -72,9 +72,9 @@ function createPlots() {
         var layout = {
             plot_bgcolor:"#272727",
             paper_bgcolor:"#262626",
-            title: "Top 10",
+            title: "<b>Top 10 Sample Values</b>",
             xaxis: {
-                range: [0, 250]
+                title: "Sample Values"
             },
             font: {
               color: '#a1a1a1'
@@ -101,9 +101,13 @@ function createPlots() {
 
           // Plot Layout
           var layout = {
-            plot_bgcolor:"black",
-            paper_bgcolor:"#262626",
-            title: 'Bubble Chart Hover Text',
+            plot_bgcolor:"#262626",
+            paper_bgcolor:"#222222",
+            title: '<b>Values of Each Sample</b>',
+            xaxis: {
+              title: "OTU ID"
+            },
+            height: 700,
             showlegend: false,
             font: {
               color: '#a1a1a1'
