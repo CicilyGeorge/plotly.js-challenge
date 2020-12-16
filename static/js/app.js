@@ -109,7 +109,7 @@ function createPlots() {
             xaxis: {
               title: "OTU ID"
             },
-            height: 700,
+            height: 600,
             showlegend: false,
             font: {
               color: '#a1a1a1'

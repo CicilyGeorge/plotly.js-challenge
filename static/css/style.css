@@ -79,16 +79,18 @@ display: none !important;
 }
 
 #bar {
+  margin-top: -20px;
   padding-left: 10px;
 }
 
 #gauge {
+  margin-top: -20px;
   float: left;
   padding: 0px;
 }
 
 #bubble {
-  margin-top: -180px;
+  margin-top: -160px;
 }
 
 
