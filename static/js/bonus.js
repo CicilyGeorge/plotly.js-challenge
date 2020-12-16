@@ -84,7 +84,8 @@ function plotGauge(wfreq) {
         paper_bgcolor:"#262626",
         font: { color: "#ffffff"}
     };
+    var defaultPlotlyConfiguration = {displayModeBar: false};
 
-    Plotly.newPlot('gauge', data, layout);
+    Plotly.newPlot('gauge', data, layout, defaultPlotlyConfiguration);
 
 }
