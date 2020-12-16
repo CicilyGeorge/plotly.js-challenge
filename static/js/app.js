@@ -15,6 +15,7 @@ function init() {
                                 .data(ids)
                                 .enter()
                                 .append('option')
+                                .attr("class", "idOption")
                                 .attr("value", (d) => d)
                                 .text((d) => d)
                                 .property("selected", (d) => d == ids[0]);

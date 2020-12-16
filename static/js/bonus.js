@@ -88,7 +88,6 @@ function plotGauge(wfreq) {
     };
     let config = {
         displayModeBar: false, // this is the line that hides the bar.
-        responsive: true
     };
 
     Plotly.newPlot('gauge', data, layout, config);

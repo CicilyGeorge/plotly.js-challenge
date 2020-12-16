@@ -1,135 +1,141 @@
 html body {
-    background-color: hsl(0, 0%, 15%);
+  background-color: hsl(0, 0%, 15%);
 }
 
 .modebar {
-  display: none !important;
+display: none !important;
 }
 
 #banner {
-    background-image: url("../../Images/Navelgazing.jpg");
-    height: 300px;
-    padding: 100px 0px 0px 0px;
-  }
-  
+  background-image: url("../../Images/Navelgazing.jpg");
+  height: 300px;
+  padding: 100px 0px 0px 0px;
+}
+
+#banner h1 {
+  color: #f1f1f1;
+  background-color: #000000;
+  font-size: 50px;
+  -webkit-text-stroke: 1px #f1f1f1;
+  -webkit-text-fill-color: black;
+  padding-bottom: 5px;
+}
+
+#banner p {
+  color: #f1f1f1;
+  background-color: #000000;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+#dashboard {
+  padding: 20px;
+}
+
+.well {
+  background-color: #272727;
+  color: #f1f1f1;
+  padding: 10px;
+  margin-bottom: 30px;
+  height: fit-content;
+}
+
+.well h5{
+  font-size: 14px;
+}
+
+#selDataset {
+  background-color: #272727;
+  font-size: 14px;
+  border: 5px solid #a9c4cc;
+  border-radius: 5px;
+  width: 80px;
+} 
+
+#selDataset :hover{
+  background-color: #f1f1f1;
+  color: #000000;
+}
+
+.idOption {
+  background-color: #272727;
+  color: #f1f1f1;
+  font-size: 12px;
+}
+
+.idOption :hover{
+  background-color: #f1f1f1;
+  color:#000000;
+  font-size: 14px;
+}
+
+#sample-metadata {
+  font-size: 14px;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+#sample-metadata span{
+  font-weight: bold;
+}
+
+#bar {
+  padding-left: 10px;
+}
+
+#gauge {
+  float: left;
+  padding: 0px;
+}
+
+#bubble {
+  margin-top: -100px;
+}
+
+
+
+@media only screen and (max-width: 600px) {
   #banner h1 {
-    color: #f1f1f1;
-    background-color: #000000;
-    font-size: 50px;
-    -webkit-text-stroke: 1px #f1f1f1;
-    -webkit-text-fill-color: black;
-    padding-bottom: 5px;
-  }
-  
-  #banner p {
-    color: #f1f1f1;
-    background-color: #000000;
-    font-size: 18px;
-    margin-top: 10px;
+    font-size: 34px;
   }
 
-  #dashboard {
-    padding: 20px;
+  #labelID {
+    width: 50%;
   }
 
+  /* #selectID {
+    margin-top: -2px;
+  } */
+
+  #selDataset {
+    width: 80px;
+    margin-top: -30px;
+    float: left;
+  }
+}
+
+@media only screen and (max-width: 979px) {
   .well {
-    background-color: #272727;
-    color: #f1f1f1;
-    padding: 10px;
-    margin-bottom: 30px;
-    height: fit-content;
-  }
-
-  .well h5{
-    font-size: 14px;
+    padding-top: 10px;
+     padding-bottom: 30px;
   }
 
   #selDataset {
-    background-color: #272727;
-    font-size: 14px;
-    border: 5px solid #a9c4cc;
-    border-radius: 5px;
-    width: 100px;
+    float: right;
+    width: fit-content;
   } 
 
-  #selDataset option{
-    background-color: #272727;
-    color: #f1f1f1;
-    font-size: 12px;
+  .panel-heading {
+    padding-left: 2px;
   }
 
-  #selDataset option :hover{
-    background-color: #f1f1f1;
-    color:#000000;
+}  
+@media only screen and (min-width: 1500px) {
+  #selDataset {
+    margin-top: -25px;
+    float: right;
   }
-
   #sample-metadata {
-    font-size: 14px;
-    font-family:Arial, Helvetica, sans-serif;
+    padding-left: 50px;
   }
 
-  #sample-metadata span{
-    font-weight: bold;
-  }
-
-  #bar {
-    padding-left: 10px;
-  }
-
-  #gauge {
-    float: left;
-    padding: 0px;
-  }
-
-  #bubble {
-    margin-top: -10px;
-  }
-
-
-
-  @media only screen and (max-width: 600px) {
-    #banner h1 {
-      font-size: 34px;
-    }
-
-    #labelID {
-      width: 50%;
-    }
-
-    /* #selectID {
-      margin-top: -2px;
-    } */
-
-    #selDataset {
-      width: 80px;
-      margin-top: -30px;
-      float: left;
-    }
-  }
-
-  @media only screen and (max-width: 979px) {
-    .well {
-      padding-top: 10px;
-       padding-bottom: 30px;
-    }
-
-    #selDataset {
-      float: right;
-      width: fit-content;
-    } 
-
-    .panel-heading {
-      padding-left: 2px;
-    }
-
-  }  
-  @media only screen and (min-width: 1500px) {
-    #selDataset {
-      margin-top: -25px;
-      float: right;
-    }
-    #sample-metadata {
-      padding-left: 50px;
-    }
-
-  } 
+} 
