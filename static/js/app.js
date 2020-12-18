@@ -6,7 +6,7 @@ let info_box = d3.select("#sample-metadata");
 // Function to Load the dropdown items on page load
 function init() {
   // reading data from json file
-    d3.json("data/samples.json").then(function(data){
+    d3.json("../../data/samples.json").then(function(data){
         // Getting each dataset from the data
         let ids = data.metadata.map(names => names.id);
 
@@ -27,7 +27,7 @@ function init() {
 // Function to create Plots on selected Dropdown item
 function createPlots() {
     // Reading data from json file
-    d3.json("data/samples.json").then(function(data){
+    d3.json("../../data/samples.json").then(function(data){
         // Getting id choosen from dropdown
         dataSet = selDataset.property("value");
 
